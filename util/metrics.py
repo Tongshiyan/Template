@@ -31,10 +31,10 @@ def MSPE(pred, true):
 
 
 def metric(pred, true):
-    acc=accuracy_score(pred,true)
-    b_acc=balanced_accuracy_score(pred,true)
-    prec=precision_score(pred,true)
-    rec=recall_score(pred,true)
-    f1=f1_score(pred,true)
+    acc=accuracy_score(true,pred)
+    b_acc=balanced_accuracy_score(true,pred)
+    prec=precision_score(true,pred)
+    rec=recall_score(true,pred)
+    f1=f1_score(true,pred)
 
     return acc,b_acc,prec,rec,f1

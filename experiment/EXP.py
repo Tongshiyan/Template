@@ -155,16 +155,16 @@ class EXP_model():
                 outputs = outputs.detach().cpu().numpy()
                 batch_y = batch_y.detach().cpu().numpy()
 
-                pred = outputs
-                true = batch_y
+                pred = np.argmax(outputs,axis=1) #(batch_size,1)
+                true = np.argmax(batch_y,axis=1)
 
-                preds.append(pred)
-                trues.append(true)
+                preds.extend(pred)
+                trues.extend(true)
                 #
 
-        preds = np.array(preds)
-        trues = np.array(trues)
-        print('test shape:', preds.shape, trues.shape)
+        # preds = np.array(preds)
+        # trues = np.array(trues)
+        # print('test shape:', preds.shape, trues.shape)
 
         # result save
         folder_path = './output/test_results/' + setting + '/' + self.args.bearing_name + '/'
