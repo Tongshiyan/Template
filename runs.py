@@ -3,8 +3,9 @@ if __name__ == '__main__':
     print('device : {}'.format(device))
     for ii in range(args.itr):
         base_args = args
-        setting = '{}_{}_lr{}_batch{}_opt{}_{}'.format(
+        setting = '{}_{}_{}_lr{}_batch{}_opt{}_{}'.format(
             args.exp_name,
+            args.task_name,
             args.model,
             args.learning_rate,
             args.batch_size,
