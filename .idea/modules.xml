@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GASF-GAN-ALOFT.iml" filepath="$PROJECT_DIR$/.idea/GASF-GAN-ALOFT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Template.iml" filepath="$PROJECT_DIR$/.idea/Template.iml" />
     </modules>
   </component>
 </project>

@@ -1,5 +1,4 @@
 # from models.model import *
-from models.model1D import *
 from experiment.configs import *
 from util.warehouse import *
 from util.metrics import *
