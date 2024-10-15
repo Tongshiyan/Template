@@ -41,7 +41,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2e2gFibUfUhRa8dfxQ5u24Hqr3v" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="更新" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -213,7 +215,7 @@
       <workItem from="1728981962550" duration="1769000" />
       <workItem from="1728983974786" duration="609000" />
       <workItem from="1728999442715" duration="2457000" />
-      <workItem from="1729001914437" duration="313000" />
+      <workItem from="1729001914437" duration="439000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1728999526473</created>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729002203684</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1729002315760</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729002315760</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="662" y="195" key="#test/0.0.1920.1032@0.0.1920.1032" timestamp="1728961048270" />
-    <state x="558" y="83" key="CommitChangelistDialog2" timestamp="1729001575616">
+    <state x="558" y="83" key="CommitChangelistDialog2" timestamp="1729002347572">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1729001575616" />
+    <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1729002347572" />
     <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1729001904195">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
