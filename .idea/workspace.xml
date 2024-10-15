@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a2a4a00-1fe1-4bfd-a9b4-eface16499e6" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="1a2a4a00-1fe1-4bfd-a9b4-eface16499e6" name="默认更改列表" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +218,7 @@
       <workItem from="1729001914437" duration="439000" />
       <workItem from="1729002473111" duration="503000" />
       <workItem from="1729002991226" duration="750000" />
-      <workItem from="1729003806355" duration="92000" />
+      <workItem from="1729003806355" duration="403000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1728999526473</created>
@@ -278,7 +276,28 @@
       <option name="project" value="LOCAL" />
       <updated>1729003693934</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1729003907024</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729003907024</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <created>1729003969679</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1729003969679</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <created>1729004179128</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1729004179128</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,10 +339,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="662" y="195" key="#test/0.0.1920.1032@0.0.1920.1032" timestamp="1728961048270" />
-    <state x="558" y="83" key="CommitChangelistDialog2" timestamp="1729003693238">
+    <state x="558" y="83" key="CommitChangelistDialog2" timestamp="1729004178321">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1729003693238" />
+    <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1729004178321" />
     <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1729003740788">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
