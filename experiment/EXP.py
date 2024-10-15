@@ -167,7 +167,7 @@ class EXP_model():
         # print('test shape:', preds.shape, trues.shape)
 
         # result save
-        folder_path = './output/test_results/' + setting + '/' + self.args.bearing_name + '/'
+        folder_path = './output/test_results/' + setting + '/' + self.args.task_name + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 

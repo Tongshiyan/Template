@@ -4,7 +4,6 @@ parser = argparse.ArgumentParser(description='Paper EXP')
 
 
 #model
-
 parser.add_argument('--img_size', type=int, default=150,help='size of img')
 
 
@@ -15,6 +14,7 @@ parser.add_argument('--labels_path', type=str, default='labels.csv', help='label
 parser.add_argument('--train_set_ratio', type=float, default=0.75)
 
 #model hyperparameter settings
+parser.add_argument('--task_name', type=str, default='VGG16_EXP')
 parser.add_argument('--opt_name', type=str, default='SDG')
 parser.add_argument('--train_epochs', type=int, default=200)
 parser.add_argument('--learning_rate', type=float, default=0.0025)
