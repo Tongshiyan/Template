@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a2a4a00-1fe1-4bfd-a9b4-eface16499e6" name="默认更改列表" comment="update" />
+    <list default="true" id="1a2a4a00-1fe1-4bfd-a9b4-eface16499e6" name="默认更改列表" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +60,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Python.test">
     <configuration name="EXP" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -194,7 +215,7 @@
       <workItem from="1728959993564" duration="16353000" />
       <workItem from="1728981962550" duration="1769000" />
       <workItem from="1728983974786" duration="609000" />
-      <workItem from="1728999442715" duration="2017000" />
+      <workItem from="1728999442715" duration="2457000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1728999526473</created>
@@ -210,17 +231,42 @@
       <option name="project" value="LOCAL" />
       <updated>1729001264403</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1729001484431</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729001484431</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="842" y="378" key="#Notifications" timestamp="1729001571462">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="842" y="378" key="#Notifications/0.0.1920.1032@0.0.1920.1032" timestamp="1729001571462" />
     <state x="690" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1728958226358">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -233,26 +279,26 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="662" y="195" key="#test/0.0.1920.1032@0.0.1920.1032" timestamp="1728961048270" />
-    <state x="558" y="83" key="CommitChangelistDialog2" timestamp="1729001333813">
+    <state x="558" y="83" key="CommitChangelistDialog2" timestamp="1729001575616">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1729001333813" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1729001211264">
+    <state x="558" y="83" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1729001575616" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1729001904195">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1729001211264" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1729001211264">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1729001904195" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1729001904195">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1729001211264" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1729001211264">
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1729001904195" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1729001904195">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1729001211264" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1729001211264">
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1729001904195" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1729001904195">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1729001211264" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1729001904195" />
     <state width="1877" height="344" key="GridCell.Tab.1.bottom" timestamp="1728981886216">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -269,14 +315,14 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state width="1877" height="344" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1728981886216" />
-    <state x="461" y="160" key="SettingsEditor" timestamp="1728982885641">
+    <state x="297" y="155" key="SettingsEditor" timestamp="1729001903032">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="461" y="160" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1728982885641" />
-    <state x="753" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1729001337848">
+    <state x="297" y="155" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1729001903032" />
+    <state x="753" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1729001603674">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="753" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" timestamp="1729001337848" />
+    <state x="753" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1032@0.0.1920.1032" timestamp="1729001603674" />
     <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1728960928068">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

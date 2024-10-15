@@ -6,3 +6,4 @@ b=torch.tensor([[0,1],[0,1]]).float()
 print(a,b)
 c=torch.nn.CrossEntropyLoss()
 print(c(a,b))
+
