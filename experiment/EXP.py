@@ -98,9 +98,7 @@ class EXP_model():
                 self.model_optim.zero_grad()
                 batch_x = batch_x.float().to(self.device)
                 batch_y = batch_y.float().to(self.device)
-
                 outputs = self.model(batch_x)
-
                 loss = self.criterion(outputs, batch_y)
                 train_loss.append(loss.item())
 

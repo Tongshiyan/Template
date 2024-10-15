@@ -1,6 +1,6 @@
 from experiment.EXP import *
 if __name__ == '__main__':
-
+    print('device : {}'.format(device))
     for ii in range(args.itr):
         base_args = args
         setting = '{}_{}_lr{}_batch{}_opt{}_{}'.format(
