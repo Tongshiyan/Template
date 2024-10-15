@@ -1,6 +1,5 @@
 import numpy as np
-
-
+from sklearn.metrics import accuracy_score, balanced_accuracy_score, precision_score, recall_score, f1_score
 def RSE(pred, true):
     return np.sqrt(np.sum((true - pred) ** 2)) / np.sqrt(np.sum((true - true.mean()) ** 2))
 
@@ -32,10 +31,10 @@ def MSPE(pred, true):
 
 
 def metric(pred, true):
-    mae = MAE(pred, true)
-    mse = MSE(pred, true)
-    rmse = RMSE(pred, true)
-    mape = MAPE(pred, true)
-    mspe = MSPE(pred, true)
+    acc=accuracy_score(pred,true)
+    b_acc=balanced_accuracy_score(pred,true)
+    prec=precision_score(pred,true)
+    rec=recall_score(pred,true)
+    f1=f1_score(pred,true)
 
-    return mae, mse, rmse, mape, mspe
+    return acc,b_acc,prec,rec,f1
