@@ -5,6 +5,8 @@
 
 数据集：https://github.com/zae-bayern/elpv-dataset
 
+注：labels.csv经过分列与添加标题行的处理
+
 
 runs.py 运行文件
 -
@@ -40,6 +42,7 @@ Defect detection in PV cells PV using VGG16 network (classification task)
 
 Dataset: https://github.com/zae-bayern/elpv-dataset
 
+Note: labels.csv is disaggregated and header rows are added
 
 runs.py run file
 -
