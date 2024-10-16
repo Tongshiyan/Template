@@ -20,7 +20,7 @@ class Dataset_loader(Dataset):
             transforms.Resize((self.args.img_size,self.args.img_size))
         ])
         self.test_start=round(self.ratio*self.length)
-        self.vail_start=self.test_start-round(self.set_ratio*self.length)
+        self.vali_start=self.test_start-round(self.set_ratio*self.length)
 
     def __getitem__(self, item):
         # 0 is functional and 1 is defective
@@ -31,11 +31,11 @@ class Dataset_loader(Dataset):
             else:
                 return self.trans(img), torch.tensor([1,0]).float(), self.labels.iloc[self.shuffle_list[item], 2]
         elif self.args.set_select==1:
-            img = Image.open(os.path.join(self.args.root_path, self.labels.iloc[self.shuffle_list[item+self.vail_start], 0])).convert('RGB')
-            if self.labels.iloc[self.shuffle_list[item+self.vail_start], 1] > 0.5:
-                return self.trans(img), torch.tensor([0, 1]).float(), self.labels.iloc[self.shuffle_list[item+self.vail_start], 2]
+            img = Image.open(os.path.join(self.args.root_path, self.labels.iloc[self.shuffle_list[item+self.vali_start], 0])).convert('RGB')
+            if self.labels.iloc[self.shuffle_list[item+self.vali_start], 1] > 0.5:
+                return self.trans(img), torch.tensor([0, 1]).float(), self.labels.iloc[self.shuffle_list[item+self.vali_start], 2]
             else:
-                return self.trans(img), torch.tensor([1, 0]).float(), self.labels.iloc[self.shuffle_list[item+self.vail_start], 2]
+                return self.trans(img), torch.tensor([1, 0]).float(), self.labels.iloc[self.shuffle_list[item+self.vali_start], 2]
 
         else:
             img = Image.open(os.path.join(self.args.root_path, self.labels.iloc[self.shuffle_list[item+self.test_start], 0])).convert('RGB')
@@ -46,9 +46,9 @@ class Dataset_loader(Dataset):
 
     def __len__(self):
         if self.args.set_select==0:
-            return self.vail_start
+            return self.vali_start
         elif self.args.set_select==1:
-            return self.test_start-self.vail_start
+            return self.test_start-self.vali_start
         else:
             return self.length-self.test_start
 
@@ -63,7 +63,7 @@ class EXP_model():
         self.device=device
         self.dataset=Dataset_loader(self.args)
 
-    def vail(self,vali_loader,criterion):
+    def vali(self,vali_loader,criterion):
         total_loss = []
 
         self.model.eval()
@@ -87,8 +87,8 @@ class EXP_model():
         print('The length of train set is {}'.format(len(self.dataset)))
         train_loader = DataLoader(self.dataset,self.args.batch_size,shuffle=False)
         self.dataset.args.set_select = 1
-        print('The length of vail set is {}'.format(len(self.dataset)))
-        vail_loader = DataLoader(self.dataset, self.args.batch_size, shuffle=False)
+        print('The length of vali set is {}'.format(len(self.dataset)))
+        vali_loader = DataLoader(self.dataset, self.args.batch_size, shuffle=False)
         self.dataset.args.set_select=2
         print('The length of test set is {}'.format(len(self.dataset)))
         test_loader = DataLoader(self.dataset,self.args.batch_size,shuffle=False)
@@ -131,8 +131,8 @@ class EXP_model():
             print("Epoch: {} cost time: {}".format(epoch + 1, time.time() - epoch_time))
             train_loss = np.average(train_loss)
             train_loss_list.append(train_loss)
-            vali_loss = self.vail(vail_loader, self.criterion)
-            test_loss = self.vail(test_loader, self.criterion)
+            vali_loss = self.vali(vali_loader, self.criterion)
+            test_loss = self.vali(test_loader, self.criterion)
             print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
                 epoch + 1, train_steps, train_loss, vali_loss,test_loss))
             early_stopping(vali_loss, self.model, path)

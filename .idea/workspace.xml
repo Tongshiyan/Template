@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2a4a00-1fe1-4bfd-a9b4-eface16499e6" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment/EXP.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment/EXP.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +226,7 @@
       <workItem from="1729058746074" duration="43000" />
       <workItem from="1729059021924" duration="31000" />
       <workItem from="1729071137425" duration="76000" />
+      <workItem from="1729076997991" duration="117000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1728999526473</created>
