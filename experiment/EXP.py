@@ -14,31 +14,43 @@ class Dataset_loader(Dataset):
         self.shuffle_list=list(range(self.length))
         random.shuffle(self.shuffle_list)
         self.ratio=self.args.train_set_ratio
+        self.set_ratio = self.args.set_ratio
         self.trans= transforms.Compose([
             transforms.ToTensor(),
             transforms.Resize((self.args.img_size,self.args.img_size))
         ])
+        self.test_start=round(self.ratio*self.length)
+        self.vail_start=self.test_start-round(self.set_ratio*self.length)
+
     def __getitem__(self, item):
         # 0 is functional and 1 is defective
-        if self.args.train_condition:
+        if self.args.set_select==0:
             img=Image.open(os.path.join(self.args.root_path,self.labels.iloc[self.shuffle_list[item],0])).convert('RGB')
             if self.labels.iloc[self.shuffle_list[item],1]>0.5:
                 return self.trans(img),torch.tensor([0,1]).float(),self.labels.iloc[self.shuffle_list[item],2]
             else:
                 return self.trans(img), torch.tensor([1,0]).float(), self.labels.iloc[self.shuffle_list[item], 2]
+        elif self.args.set_select==1:
+            img = Image.open(os.path.join(self.args.root_path, self.labels.iloc[self.shuffle_list[item+self.vail_start], 0])).convert('RGB')
+            if self.labels.iloc[self.shuffle_list[item+self.vail_start], 1] > 0.5:
+                return self.trans(img), torch.tensor([0, 1]).float(), self.labels.iloc[self.shuffle_list[item+self.vail_start], 2]
+            else:
+                return self.trans(img), torch.tensor([1, 0]).float(), self.labels.iloc[self.shuffle_list[item+self.vail_start], 2]
 
         else:
-            img = Image.open(os.path.join(self.args.root_path, self.labels.iloc[self.shuffle_list[item+round(self.ratio*self.length)], 0])).convert('RGB')
-            if self.labels.iloc[self.shuffle_list[item+round(self.ratio*self.length)], 1] > 0.5:
-                return self.trans(img), torch.tensor([0,1]), self.labels.iloc[self.shuffle_list[item+round(self.ratio*self.length)], 2]
+            img = Image.open(os.path.join(self.args.root_path, self.labels.iloc[self.shuffle_list[item+self.test_start], 0])).convert('RGB')
+            if self.labels.iloc[self.shuffle_list[item+self.test_start], 1] > 0.5:
+                return self.trans(img), torch.tensor([0,1]), self.labels.iloc[self.shuffle_list[item+self.test_start], 2]
             else:
-                return self.trans(img), torch.tensor([1,0]).float(), self.labels.iloc[self.shuffle_list[item+round(self.ratio*self.length)], 2]
+                return self.trans(img), torch.tensor([1,0]).float(), self.labels.iloc[self.shuffle_list[item+self.test_start], 2]
 
     def __len__(self):
-        if self.args.train_condition:
-            return round(self.ratio*self.length)
+        if self.args.set_select==0:
+            return self.vail_start
+        elif self.args.set_select==1:
+            return self.test_start-self.vail_start
         else:
-            return self.length-round(self.ratio*self.length)
+            return self.length-self.test_start
 
 class EXP_model():
     def __init__(self,args):
@@ -71,10 +83,13 @@ class EXP_model():
         return total_loss
 
     def train(self,setting):
-        self.dataset.args.train_condition = True
+        self.dataset.args.set_select = 0
         print('The length of train set is {}'.format(len(self.dataset)))
         train_loader = DataLoader(self.dataset,self.args.batch_size,shuffle=False)
-        self.dataset.args.train_condition=False
+        self.dataset.args.set_select = 1
+        print('The length of vail set is {}'.format(len(self.dataset)))
+        vail_loader = DataLoader(self.dataset, self.args.batch_size, shuffle=False)
+        self.dataset.args.set_select=2
         print('The length of test set is {}'.format(len(self.dataset)))
         test_loader = DataLoader(self.dataset,self.args.batch_size,shuffle=False)
 
@@ -116,7 +131,7 @@ class EXP_model():
             print("Epoch: {} cost time: {}".format(epoch + 1, time.time() - epoch_time))
             train_loss = np.average(train_loss)
             train_loss_list.append(train_loss)
-            vali_loss = self.vail(train_loader, self.criterion)
+            vali_loss = self.vail(vail_loader, self.criterion)
             test_loss = self.vail(test_loader, self.criterion)
             print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
                 epoch + 1, train_steps, train_loss, vali_loss,test_loss))
@@ -126,15 +141,16 @@ class EXP_model():
                 break
         best_model_path = path + '/' + 'checkpoint.pth'
         self.model.load_state_dict(torch.load(best_model_path))
-        self.args.train_condition = False
+        plt.figure()
         plt.plot(range(len(train_loss_list)),train_loss_list)
         plt.xlabel('epoch')
         plt.ylabel('train_loss')
         plt.show()
+        plt.savefig(path + '/' + 'train_loss.png')
         return self.model
 
     def test(self, setting):
-        self.dataset.args.train_condition=False
+        self.dataset.args.set_select=2
         test_loader = DataLoader(self.dataset, self.args.batch_size, shuffle=False)
 
         print('loading model')
@@ -191,9 +207,8 @@ class EXP_model():
 
 if __name__ == '__main__':
     a=Dataset_loader(args)
-
-    a.args.train_condition=False
-    print(len(a))
+    b=a[:50]
+    print(len(b))
     # b=DataLoader(a,batch_size=args.batch_size)
     # c=[]
     # for x, y in b:
