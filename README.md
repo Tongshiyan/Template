@@ -20,7 +20,7 @@ experiment 实验配置文件夹
 
 models 模型文件夹
    -
-     model 主要模型 ours
+     model.py 主要模型 ours
 
 util 常用文件夹
    -
@@ -55,7 +55,7 @@ experiment Experiment configuration folder
 
 models models folder
    -
-   models model Main model ours
+    model.py Main model ours
 
 util common folder
    -

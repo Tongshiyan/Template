@@ -20,16 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a2a4a00-1fe1-4bfd-a9b4-eface16499e6" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/easycode/codebase-v2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment/EXP.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment/EXP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/checkpoints/2024-10-15_VGG16_lr0.0025_batch64_optSDG_1/checkpoint.pth" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_results/2024-10-15_VGG16_lr0.0025_batch64_optSDG_1/VGG16_EXP/metric_process.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/test_results/2024-10-15_VGG16_lr0.0025_batch64_optSDG_1/VGG16_EXP/metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +224,7 @@
       <workItem from="1729010114308" duration="5398000" />
       <workItem from="1729058297733" duration="414000" />
       <workItem from="1729058746074" duration="43000" />
+      <workItem from="1729059021924" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1728999526473</created>
